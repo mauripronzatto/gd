@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctico 5 - Grid Responsivo</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .grid {
+      display: grid;
+      gap: 15px;
+      margin: 20px;
+    }
+    .col {
+      background: peachpuff;
+      padding: 20px;
+      border: 2px solid brown;
+      text-align: center;
+    }
+    @media (min-width: 992px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 767px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <h2>Práctico 5: Diseño Responsivo con Grid</h2>
+  <div class="grid">
+    <div class="col">Columna 1</div>
+    <div class="col">Columna 2</div>
+    <div class="col">Columna 3</div>
+  </div>
+</body>
+</html>
